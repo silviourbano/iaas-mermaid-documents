@@ -1,6 +1,4 @@
 graph LR
-  v1.5.nsxt.tag.create -->|next| v1.virtual.machine.create
-  v1.5.nsxt.tag.create -->|error| v1.1.nsxt.nat.create.error.delete
   v2.1.vsphere.vm.create -->|next| v2.2.vsphere.vm.password
   v2.1.vsphere.vm.create -->|error| v2.2.vsphere.vm.create.error.delete
   v2.2.vsphere.vm.password -->|next| v2.3.vsphere.vm.userdata

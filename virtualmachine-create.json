@@ -1,11 +1,5 @@
 [
   {
-    "etcd": "nsxt-virtual-machine",
-    "this": "v1.5.nsxt.tag.create",
-    "next": "v1.virtual.machine.create",
-    "error": "v1.1.nsxt.nat.create.error.delete"
-  },
-  {
     "etcd": "vmware-virtual-machine",
     "this": "v2.1.vsphere.vm.create",
     "next": "v2.2.vsphere.vm.password",
