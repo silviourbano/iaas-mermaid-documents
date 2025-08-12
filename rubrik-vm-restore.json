@@ -1,0 +1,14 @@
+[
+  {
+    "etcd": "rubrik-virtual-machine",
+    "this": "v2.1.rubrik.vm.restore",
+    "next": "v2.2.rubrik.vm.check",
+    "error": "v2.restore"
+  },
+  {
+    "etcd": "rubrik-virtual-machine",
+    "this": "v2.2.rubrik.vm.check",
+    "next": "v2.restore",
+    "error": "v2.restore"
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "etcd": "vmware-virtual-machine",
+    "this": "v2.1.vsphere.vm.reconfigure",
+    "next": "v2.2.vsphere.vm.state",
+    "error": "v2.virtual.machine.reconfigure"
+  },
+  {
+    "etcd": "vmware-virtual-machine",
+    "this": "v2.2.vsphere.vm.state",
+    "next": "v2.3.nsxt.nat.delete",
+    "error": "v2.virtual.machine.reconfigure"
+  },
+  {
+    "etcd": "nsxt-nat",
+    "this": "v2.3.nsxt.nat.delete",
+    "next": "v2.4.nsxt.nat.create",
+    "error": "v2.virtual.machine.reconfigure"
+  },
+  {
+    "etcd": "nsxt-nat",
+    "this": "v2.4.nsxt.nat.create",
+    "next": "v2.virtual.machine.reconfigure",
+    "error": "v2.virtual.machine.reconfigure"
+  }
+]

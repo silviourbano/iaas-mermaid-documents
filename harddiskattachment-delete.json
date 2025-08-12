@@ -1,0 +1,14 @@
+[
+  {
+    "etcd": "vmware-disk",
+    "this": "v2.1.vsphere.disk.detach",
+    "next": "v2.2.vsphere.disk.move",
+    "error": "v2.disk.detach"
+  },
+  {
+    "etcd": "vmware-disk",
+    "this": "v2.2.vsphere.disk.move",
+    "next": "v2.disk.detach",
+    "error": "v2.disk.detach"
+  }
+]

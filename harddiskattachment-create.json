@@ -1,0 +1,14 @@
+[
+  {
+    "etcd": "vmware-disk",
+    "this": "v2.1.vsphere.disk.attach",
+    "next": "v2.2.vsphere.disk.policy",
+    "error": "v2.disk.attach"
+  },
+  {
+    "etcd": "vmware-disk",
+    "this": "v2.2.vsphere.disk.policy",
+    "next": "v2.disk.attach",
+    "error": "v2.disk.attach"
+  }
+]

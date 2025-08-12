@@ -1,0 +1,13 @@
+graph LR
+  v2.1.nsxt.group.create -->|next| v2.2.nsxt.group.edit
+  v2.1.nsxt.group.create -->|error| v2.securitypolicy.edit
+  v2.2.nsxt.group.edit -->|next| v2.3.nsxt.service.create
+  v2.2.nsxt.group.edit -->|error| v2.securitypolicy.edit
+  v2.3.nsxt.service.create -->|next| v2.4.nsxt.rule.edit
+  v2.3.nsxt.service.create -->|error| v2.securitypolicy.edit
+  v2.4.nsxt.rule.edit -->|next| v2.5.nsxt.group.delete
+  v2.4.nsxt.rule.edit -->|error| v2.securitypolicy.edit
+  v2.5.nsxt.group.delete -->|next| v2.6.nsxt.service.delete
+  v2.5.nsxt.group.delete -->|error| v2.securitypolicy.edit
+  v2.6.nsxt.service.delete -->|next| v2.securitypolicy.edit
+  v2.6.nsxt.service.delete -->|error| v2.securitypolicy.edit

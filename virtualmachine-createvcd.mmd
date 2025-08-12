@@ -1,0 +1,5 @@
+graph LR
+  v2.1.vsphere.vm.createvcd -->|next| v2.virtual.machine.createvcd
+  v2.1.vsphere.vm.createvcd -->|error| v2.2.vsphere.vm.createvcd.error.delete
+  v2.2.vsphere.vm.createvcd.error.delete -->|next| v2.virtual.machine.createvcd
+  v2.2.vsphere.vm.createvcd.error.delete -->|error| v2.virtual.machine.createvcd

@@ -1,0 +1,74 @@
+[
+  {
+    "etcd": "paloalto-rule",
+    "this": "v2.1.paloalto.rule.delete",
+    "next": "v2.2.paloalto.rule.edit",
+    "error": "v2.public.address.delete"
+  },
+  {
+    "etcd": "paloalto-rule",
+    "this": "v2.2.paloalto.rule.edit",
+    "next": "v2.3.paloalto.nat.delete",
+    "error": "v2.public.address.delete"
+  },
+  {
+    "etcd": "paloalto-nat",
+    "this": "v2.3.paloalto.nat.delete",
+    "next": "v2.4.paloalto.nat.edit",
+    "error": "v2.public.address.delete"
+  },
+  {
+    "etcd": "paloalto-nat",
+    "this": "v2.4.paloalto.nat.edit",
+    "next": "v2.5.paloalto.host.delete",
+    "error": "v2.public.address.delete"
+  },
+  {
+    "etcd": "paloalto-host",
+    "this": "v2.5.paloalto.host.delete",
+    "next": "v2.6.nsxt.lb.edit",
+    "error": "v2.public.address.delete"
+  },
+  {
+    "etcd": "nsxt-load-balance",
+    "this": "v2.6.nsxt.lb.edit",
+    "next": "v2.7.nsxt.vs.delete",
+    "error": "v2.public.address.delete"
+  },
+  {
+    "etcd": "nsxt-virtual-server",
+    "this": "v2.7.nsxt.vs.delete",
+    "next": "v2.8.nsxt.pool.delete",
+    "error": "v2.public.address.delete"
+  },
+  {
+    "etcd": "nsxt-pool",
+    "this": "v2.8.nsxt.pool.delete",
+    "next": "v2.9.fortinet.vip.delete",
+    "error": "v2.public.address.delete"
+  },
+  {
+    "etcd": "fortinet-virtual-ip",
+    "this": "v2.9.fortinet.vip.delete",
+    "next": "v2.10.fortinet.snat.delete",
+    "error": "v2.public.address.delete"
+  },
+  {
+    "etcd": "fortinet-central-snat",
+    "this": "v2.10.fortinet.snat.delete",
+    "next": "v2.11.fortinet.ippool.delete",
+    "error": "v2.public.address.delete"
+  },
+  {
+    "etcd": "fortinet-ippool",
+    "this": "v2.11.fortinet.ippool.delete",
+    "next": "v2.12.fortinet.address.delete",
+    "error": "v2.public.address.delete"
+  },
+  {
+    "etcd": "fortinet-address",
+    "this": "v2.12.fortinet.address.delete",
+    "next": "v2.public.address.delete",
+    "error": "v2.public.address.delete"
+  }
+]

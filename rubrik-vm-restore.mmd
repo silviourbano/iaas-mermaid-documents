@@ -1,0 +1,5 @@
+graph LR
+  v2.1.rubrik.vm.restore -->|next| v2.2.rubrik.vm.check
+  v2.1.rubrik.vm.restore -->|error| v2.restore
+  v2.2.rubrik.vm.check -->|next| v2.restore
+  v2.2.rubrik.vm.check -->|error| v2.restore

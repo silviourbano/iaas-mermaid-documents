@@ -1,0 +1,32 @@
+[
+  {
+    "etcd": "nsxt-virtual-server",
+    "this": "v2.1.nsxt.vs.delete",
+    "next": "v2.2.nsxt.pool.delete",
+    "error": "v2.virtualserver.delete"
+  },
+  {
+    "etcd": "nsxt-pool",
+    "this": "v2.2.nsxt.pool.delete",
+    "next": "v2.3.nsxt.rule.delete",
+    "error": "v2.virtualserver.delete"
+  },
+  {
+    "etcd": "nsxt-rule",
+    "this": "v2.3.nsxt.rule.delete",
+    "next": "v2.4.nsxt.rule.edit",
+    "error": "v2.virtualserver.delete"
+  },
+  {
+    "etcd": "nsxt-rule",
+    "this": "v2.4.nsxt.rule.edit",
+    "next": "v2.5.nsxt.group.delete",
+    "error": "v2.virtualserver.delete"
+  },
+  {
+    "etcd": "nsxt-group",
+    "this": "v2.5.nsxt.group.delete",
+    "next": "v2.virtualserver.delete",
+    "error": "v2.virtualserver.delete"
+  }
+]

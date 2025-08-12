@@ -1,0 +1,122 @@
+[
+  {
+    "etcd": "unbound-service",
+    "this": "v2.1.unbound.dns.delete",
+    "next": "v2.2.paloalto.rule.delete",
+    "error": "v2.organization.delete"
+  },
+  {
+    "etcd": "paloalto-rule",
+    "this": "v2.2.paloalto.rule.delete",
+    "next": "v2.3.paloalto.nat.delete",
+    "error": "v2.organization.delete"
+  },
+  {
+    "etcd": "paloalto-nat",
+    "this": "v2.3.paloalto.nat.delete",
+    "next": "v2.4.paloalto.host.delete",
+    "error": "v2.organization.delete"
+  },
+  {
+    "etcd": "paloalto-host",
+    "this": "v2.4.paloalto.host.delete",
+    "next": "v2.5.paloalto.tag.delete",
+    "error": "v2.organization.delete"
+  },
+  {
+    "etcd": "paloalto-tag",
+    "this": "v2.5.paloalto.tag.delete",
+    "next": "v2.6.nsxt.vs.delete",
+    "error": "v2.organization.delete"
+  },
+  {
+    "etcd": "nsxt-virtual-server",
+    "this": "v2.6.nsxt.vs.delete",
+    "next": "v2.7.nsxt.pool.delete",
+    "error": "v2.organization.delete"
+  },
+  {
+    "etcd": "nsxt-pool",
+    "this": "v2.7.nsxt.pool.delete",
+    "next": "v2.8.nsxt.lb.delete",
+    "error": "v2.organization.delete"
+  },
+  {
+    "etcd": "nsxt-load-balance",
+    "this": "v2.8.nsxt.lb.delete",
+    "next": "v2.9.vsphere.snapshot.delete",
+    "error": "v2.organization.delete"
+  },
+  {
+    "etcd": "vmware-snapshot",
+    "this": "v2.9.vsphere.snapshot.delete",
+    "next": "v2.10.vsphere.disk.detach",
+    "error": "v2.organization.delete"
+  },
+  {
+    "etcd": "vmware-disk",
+    "this": "v2.10.vsphere.disk.detach",
+    "next": "v2.11.vsphere.disk.delete",
+    "error": "v2.organization.delete"
+  },
+  {
+    "etcd": "vmware-disk",
+    "this": "v2.11.vsphere.disk.delete",
+    "next": "v2.12.vsphere.vm.delete",
+    "error": "v2.organization.delete"
+  },
+  {
+    "etcd": "vmware-virtual-machine",
+    "this": "v2.12.vsphere.vm.delete",
+    "next": "v2.13.nsxt.nat.delete",
+    "error": "v2.organization.delete"
+  },
+  {
+    "etcd": "nsxt-nat",
+    "this": "v2.13.nsxt.nat.delete",
+    "next": "v2.14.nsxt.policy.delete",
+    "error": "v2.organization.delete"
+  },
+  {
+    "etcd": "nsxt-security-policy",
+    "this": "v2.14.nsxt.policy.delete",
+    "next": "v2.15.nsxt.group.delete",
+    "error": "v2.organization.delete"
+  },
+  {
+    "etcd": "nsxt-group",
+    "this": "v2.15.nsxt.group.delete",
+    "next": "v2.16.nsxt.segment.profile.delete",
+    "error": "v2.organization.delete"
+  },
+  {
+    "etcd": "nsxt-segment-profile",
+    "this": "v2.16.nsxt.segment.profile.delete",
+    "next": "v2.17.nsxt.segment.delete",
+    "error": "v2.organization.delete"
+  },
+  {
+    "etcd": "nsxt-segment",
+    "this": "v2.17.nsxt.segment.delete",
+    "next": "v2.18.nsxt.locale.service.delete",
+    "error": "v2.organization.delete"
+  },
+  {
+    "etcd": "nsxt-locale-service",
+    "this": "v2.18.nsxt.locale.service.delete",
+    "next": "v2.19.nsxt.tier1.delete",
+    "error": "v2.organization.delete"
+  },
+  {
+    "etcd": "nsxt-tier1",
+    "this": "v2.19.nsxt.tier1.delete",
+    "next": "v2.20.vsphere.delete.folder",
+    "error": "v2.organization.delete"
+  },
+  {
+    "etcd": "vmware-virtual-machine",
+    "this": "v2.20.vsphere.delete.folder",
+    "next": "v2.organization.delete",
+    "error": "v2.organization.delete"
+  }
+]

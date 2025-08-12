@@ -1,0 +1,14 @@
+[
+  {
+    "etcd": "vmware-snapshot",
+    "this": "v2.1.vsphere.snapshot.create",
+    "next": "v2.snapshot.create",
+    "error": "v2.1.vsphere.snapshot.create.error.delete"
+  },
+  {
+    "etcd": "vmware-snapshot",
+    "this": "v2.1.vsphere.snapshot.create.error.delete",
+    "next": "v2.snapshot.create",
+    "error": "v2.snapshot.create"
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "etcd": "rubrik-virtual-machine",
+    "this": "v2.1.rubrik.vm.export",
+    "next": "v2.2.rubrik.vm.check",
+    "error": "v2.export"
+  },
+  {
+    "etcd": "rubrik-virtual-machine",
+    "this": "v2.2.rubrik.vm.check",
+    "next": "v2.3.vsphere.vm.info",
+    "error": "v2.2.vsphere.vm.reconfigure.error.delete"
+  },
+  {
+    "etcd": "vmware-virtual-machine",
+    "this": "v2.3.vsphere.vm.info",
+    "next": "v2.4.vsphere.vm.reconfigure",
+    "error": "v2.2.vsphere.vm.reconfigure.error.delete"
+  },
+  {
+    "etcd": "vmware-virtual-machine",
+    "this": "v2.4.vsphere.vm.reconfigure",
+    "next": "v2.5.vsphere.vm.movedisk",
+    "error": "v2.2.vsphere.vm.reconfigure.error.delete"
+  },
+  {
+    "etcd": "vmware-virtual-machine",
+    "this": "v2.5.vsphere.vm.movedisk",
+    "next": "v2.6.vsphere.vm.userdata",
+    "error": "v2.2.vsphere.vm.reconfigure.error.delete"
+  },
+  {
+    "etcd": "vmware-virtual-machine",
+    "this": "v2.6.vsphere.vm.userdata",
+    "next": "v2.7.nsxt.nat.create",
+    "error": "v2.2.vsphere.vm.reconfigure.error.delete"
+  },
+  {
+    "etcd": "nsxt-nat",
+    "this": "v2.7.nsxt.nat.create",
+    "next": "v2.8.nsxt.tag.create",
+    "error": "v2.1.nsxt.nat.create.error.delete"
+  },
+  {
+    "etcd": "nsxt-virtual-machine",
+    "this": "v2.8.nsxt.tag.create",
+    "next": "v2.export",
+    "error": "v2.1.nsxt.nat.create.error.delete"
+  },
+  {
+    "etcd": "nsxt-nat",
+    "this": "v2.1.nsxt.nat.create.error.delete",
+    "next": "v2.2.vsphere.vm.reconfigure.error.delete",
+    "error": "v2.export"
+  },
+  {
+    "etcd": "vmware-virtual-machine",
+    "this": "v2.2.vsphere.vm.reconfigure.error.delete",
+    "next": "v2.export",
+    "error": "v2.export"
+  }
+]

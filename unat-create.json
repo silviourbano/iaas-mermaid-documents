@@ -1,0 +1,86 @@
+[
+  {
+    "etcd": "paloalto-service",
+    "this": "v2.1.paloalto.service.create",
+    "next": "v2.2.paloalto.host.create",
+    "error": "v2.unat.create"
+  },
+  {
+    "etcd": "paloalto-host",
+    "this": "v2.2.paloalto.host.create",
+    "next": "v2.3.paloalto.unat.create",
+    "error": "v2.3.paloalto.host.create.error.delete"
+  },
+  {
+    "etcd": "paloalto-nat",
+    "this": "v2.3.paloalto.unat.create",
+    "next": "v2.4.paloalto.unat.edit",
+    "error": "v2.2.paloalto.unat.create.error.delete"
+  },
+  {
+    "etcd": "paloalto-nat",
+    "this": "v2.4.paloalto.unat.edit",
+    "next": "v2.5.fortinet.address.create",
+    "error": "v2.1.paloalto.unat.edit.error.edit"
+  },
+  {
+    "etcd": "fortinet-address",
+    "this": "v2.5.fortinet.address.create",
+    "next": "v2.6.fortinet.service.create",
+    "error": "v2.3.fortinet.address.create.error.delete"
+  },
+  {
+    "etcd": "fortinet-service",
+    "this": "v2.6.fortinet.service.create",
+    "next": "v2.7.fortinet.vip.create",
+    "error": "v2.3.fortinet.address.create.error.delete"
+  },
+  {
+    "etcd": "fortinet-virtual-ip",
+    "this": "v2.7.fortinet.vip.create",
+    "next": "v2.8.fortinet.policy.create",
+    "error": "v2.2.fortinet.vip.create.error.delete"
+  },
+  {
+    "etcd": "fortinet-policy",
+    "this": "v2.8.fortinet.policy.create",
+    "next": "v2.unat.create",
+    "error": "v2.3.fortinet.policy.create.error.delete"
+  },
+  {
+    "etcd": "paloalto-nat",
+    "this": "v2.1.paloalto.unat.edit.error.edit",
+    "next": "v2.2.paloalto.unat.create.error.delete",
+    "error": "v2.unat.create"
+  },
+  {
+    "etcd": "fortinet-virtual-ip",
+    "this": "v2.2.fortinet.vip.create.error.delete",
+    "next": "v2.3.fortinet.address.create.error.delete",
+    "error": "v2.unat.create"
+  },
+  {
+    "etcd": "paloalto-nat",
+    "this": "v2.2.paloalto.unat.create.error.delete",
+    "next": "v2.3.paloalto.host.create.error.delete",
+    "error": "v2.unat.create"
+  },
+  {
+    "etcd": "fortinet-address",
+    "this": "v2.3.fortinet.address.create.error.delete",
+    "next": "v2.2.paloalto.unat.create.error.delete",
+    "error": "v2.unat.create"
+  },
+  {
+    "etcd": "fortinet-policy",
+    "this": "v2.3.fortinet.policy.create.error.delete",
+    "next": "v2.unat.create",
+    "error": "v2.unat.create"
+  },
+  {
+    "etcd": "paloalto-host",
+    "this": "v2.3.paloalto.host.create.error.delete",
+    "next": "v2.unat.create",
+    "error": "v2.unat.create"
+  }
+]

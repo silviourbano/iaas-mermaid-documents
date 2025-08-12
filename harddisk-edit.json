@@ -1,0 +1,20 @@
+[
+  {
+    "etcd": "vmware-disk",
+    "this": "v2.1.vsphere.disk.resize",
+    "next": "v2.2.vsphere.disk.rename",
+    "error": "v2.disk.edit"
+  },
+  {
+    "etcd": "vmware-disk",
+    "this": "v2.2.vsphere.disk.rename",
+    "next": "v2.3.vsphere.disk.policy",
+    "error": "v2.disk.edit"
+  },
+  {
+    "etcd": "vmware-disk",
+    "this": "v2.3.vsphere.disk.policy",
+    "next": "v2.disk.edit",
+    "error": "v2.disk.edit"
+  }
+]

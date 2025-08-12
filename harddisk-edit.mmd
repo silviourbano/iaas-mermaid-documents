@@ -1,0 +1,7 @@
+graph LR
+  v2.1.vsphere.disk.resize -->|next| v2.2.vsphere.disk.rename
+  v2.1.vsphere.disk.resize -->|error| v2.disk.edit
+  v2.2.vsphere.disk.rename -->|next| v2.3.vsphere.disk.policy
+  v2.2.vsphere.disk.rename -->|error| v2.disk.edit
+  v2.3.vsphere.disk.policy -->|next| v2.disk.edit
+  v2.3.vsphere.disk.policy -->|error| v2.disk.edit

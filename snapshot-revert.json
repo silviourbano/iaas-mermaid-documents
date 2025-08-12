@@ -1,0 +1,8 @@
+[
+  {
+    "etcd": "vmware-snapshot",
+    "this": "v2.1.vsphere.snapshot.revert",
+    "next": "v2.snapshot.revert",
+    "error": "v2.snapshot.revert"
+  }
+]

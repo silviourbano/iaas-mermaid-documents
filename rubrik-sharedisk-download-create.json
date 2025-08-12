@@ -1,0 +1,20 @@
+[
+  {
+    "etcd": "rubrik-host-download",
+    "this": "v2.1.rubrik.download.create",
+    "next": "v2.2.rubrik.download.check",
+    "error": "v2.2.rubrik.sharedisk.download.create.error.delete"
+  },
+  {
+    "etcd": "rubrik-host-download",
+    "this": "v2.2.rubrik.download.check",
+    "next": "v2.ontap.sharedisk.download",
+    "error": "v2.2.rubrik.sharedisk.download.create.error.delete"
+  },
+  {
+    "etcd": "rubrik-host-download",
+    "this": "v2.2.rubrik.sharedisk.download.create.error.delete",
+    "next": "v2.ontap.sharedisk.download",
+    "error": "v2.ontap.sharedisk.download"
+  }
+]

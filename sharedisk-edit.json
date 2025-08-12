@@ -1,0 +1,74 @@
+[
+  {
+    "etcd": "netapp-share-disks",
+    "this": "v2.1.ontap.sharedisk.edit",
+    "next": "v2.2.nsxt.group.edit",
+    "error": "v2.2.ontap.sharedisk.edit.error.delete"
+  },
+  {
+    "etcd": "nsxt-group",
+    "this": "v2.2.nsxt.group.edit",
+    "next": "v2.3.nsxt.rule.edit",
+    "error": "v2.2.ontap.sharedisk.edit.error.delete"
+  },
+  {
+    "etcd": "nsxt-rule",
+    "this": "v2.3.nsxt.rule.edit",
+    "next": "v2.4.rubrik.host.edit",
+    "error": "v2.2.ontap.sharedisk.edit.error.delete"
+  },
+  {
+    "etcd": "rubrik-host",
+    "this": "v2.4.rubrik.host.edit",
+    "next": "v2.5.rubrik.nas.edit",
+    "error": "v2.2.ontap.sharedisk.edit.error.edit"
+  },
+  {
+    "etcd": "rubrik-nas",
+    "this": "v2.5.rubrik.nas.edit",
+    "next": "v2.6.rubrik.fileset.edit",
+    "error": "v2.2.ontap.sharedisk.edit.error.delete"
+  },
+  {
+    "etcd": "rubrik-fileset",
+    "this": "v2.6.rubrik.fileset.edit",
+    "next": "v2.ontap.sharedisk.edit",
+    "error": "v2.2.ontap.sharedisk.edit.error.edit"
+  },
+  {
+    "etcd": "netapp-share-disks",
+    "this": "v2.2.ontap.sharedisk.edit.error.delete",
+    "next": "v2.ontap.sharedisk.edit",
+    "error": "v2.ontap.sharedisk.edit"
+  },
+  {
+    "etcd": "nsxt-group",
+    "this": "v2.2.ontap.sharedisk.edit.error.delete",
+    "next": "v2.ontap.sharedisk.edit",
+    "error": "v2.ontap.sharedisk.edit"
+  },
+  {
+    "etcd": "nsxt-rule",
+    "this": "v2.2.ontap.sharedisk.edit.error.delete",
+    "next": "v2.ontap.sharedisk.edit",
+    "error": "v2.ontap.sharedisk.edit"
+  },
+  {
+    "etcd": "rubrik-fileset",
+    "this": "v2.2.ontap.sharedisk.edit.error.delete",
+    "next": "v2.ontap.sharedisk.edit",
+    "error": "v2.ontap.sharedisk.edit"
+  },
+  {
+    "etcd": "rubrik-host",
+    "this": "v2.2.ontap.sharedisk.edit.error.delete",
+    "next": "v2.ontap.sharedisk.edit",
+    "error": "v2.ontap.sharedisk.edit"
+  },
+  {
+    "etcd": "rubrik-nas",
+    "this": "v2.2.ontap.sharedisk.edit.error.delete",
+    "next": "v2.ontap.sharedisk.edit",
+    "error": "v2.ontap.sharedisk.edit"
+  }
+]

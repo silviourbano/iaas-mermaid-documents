@@ -1,0 +1,74 @@
+[
+  {
+    "etcd": "vmware-virtual-machine",
+    "this": "v2.1.vsphere.vm.recovery",
+    "next": "v2.2.rubrik.vm.export",
+    "error": "v2.1.vsphere.vm.error.recovery"
+  },
+  {
+    "etcd": "rubrik-virtual-machine",
+    "this": "v2.2.rubrik.vm.export",
+    "next": "v2.3.rubrik.vm.check",
+    "error": "v2.1.vsphere.vm.error.recovery"
+  },
+  {
+    "etcd": "rubrik-virtual-machine",
+    "this": "v2.3.rubrik.vm.check",
+    "next": "v2.4.rubrik.vm.name",
+    "error": "v2.1.vsphere.vm.error.recovery"
+  },
+  {
+    "etcd": "rubrik-virtual-machine",
+    "this": "v2.4.rubrik.vm.name",
+    "next": "v2.5.vsphere.vm.reconfigure",
+    "error": "v2.1.vsphere.vm.error.recovery"
+  },
+  {
+    "etcd": "vmware-virtual-machine",
+    "this": "v2.5.vsphere.vm.reconfigure",
+    "next": "v2.6.vsphere.vm.movedisk",
+    "error": "v2.1.vsphere.vm.error.recovery"
+  },
+  {
+    "etcd": "vmware-virtual-machine",
+    "this": "v2.6.vsphere.vm.movedisk",
+    "next": "v2.7.vsphere.vm.info",
+    "error": "v2.1.vsphere.vm.error.recovery"
+  },
+  {
+    "etcd": "vmware-virtual-machine",
+    "this": "v2.7.vsphere.vm.info",
+    "next": "v2.8.vsphere.vm.recovery",
+    "error": "v2.1.vsphere.vm.error.recovery"
+  },
+  {
+    "etcd": "vmware-virtual-machine",
+    "this": "v2.8.vsphere.vm.recovery",
+    "next": "v2.9.nsxt.tag.create",
+    "error": "v2.recovery"
+  },
+  {
+    "etcd": "nsxt-virtual-machine",
+    "this": "v2.9.nsxt.tag.create",
+    "next": "v2.10.rubrik.vm.sla.assign",
+    "error": "v2.recovery"
+  },
+  {
+    "etcd": "vmware-disk",
+    "this": "v2.9.vsphere.disk.delete",
+    "next": "v2.10.nsxt.tag.create",
+    "error": "v2.recovery"
+  },
+  {
+    "etcd": "rubrik-virtual-machine",
+    "this": "v2.10.rubrik.vm.sla.assign",
+    "next": "v2.recovery",
+    "error": "v2.recovery"
+  },
+  {
+    "etcd": "vmware-virtual-machine",
+    "this": "v2.1.vsphere.vm.error.recovery",
+    "next": "v2.recovery",
+    "error": "v2.recovery"
+  }
+]

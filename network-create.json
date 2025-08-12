@@ -1,0 +1,56 @@
+[
+  {
+    "etcd": "nsxt-segment",
+    "this": "v2.1.nsxt.segment.create",
+    "next": "v2.2.nsxt.segment.profile.create",
+    "error": "v2.4.nsxt.segment.create.error.delete"
+  },
+  {
+    "etcd": "nsxt-segment-profile",
+    "this": "v2.2.nsxt.segment.profile.create",
+    "next": "v2.3.nsxt.group.create",
+    "error": "v2.3.nsxt.segment.profile.create.error.delete"
+  },
+  {
+    "etcd": "nsxt-group",
+    "this": "v2.3.nsxt.group.create",
+    "next": "v2.4.nsxt.rule.create",
+    "error": "v2.2.nsxt.group.create.error.delete"
+  },
+  {
+    "etcd": "nsxt-rule",
+    "this": "v2.4.nsxt.rule.create",
+    "next": "v2.5.nsxt.policy.edit",
+    "error": "v2.1.nsxt.rule.create.error.delete"
+  },
+  {
+    "etcd": "nsxt-security-policy",
+    "this": "v2.5.nsxt.policy.edit",
+    "next": "v2.network.create",
+    "error": "v2.1.nsxt.rule.create.error.delete"
+  },
+  {
+    "etcd": "nsxt-rule",
+    "this": "v2.1.nsxt.rule.create.error.delete",
+    "next": "v2.2.nsxt.group.create.error.delete",
+    "error": "v2.network.create"
+  },
+  {
+    "etcd": "nsxt-group",
+    "this": "v2.2.nsxt.group.create.error.delete",
+    "next": "v2.3.nsxt.segment.profile.create.error.delete",
+    "error": "v2.network.create"
+  },
+  {
+    "etcd": "nsxt-segment-profile",
+    "this": "v2.3.nsxt.segment.profile.create.error.delete",
+    "next": "v2.4.nsxt.segment.create.error.delete",
+    "error": "v2.network.create"
+  },
+  {
+    "etcd": "nsxt-segment",
+    "this": "v2.4.nsxt.segment.create.error.delete",
+    "next": "v2.network.create",
+    "error": "v2.network.create"
+  }
+]

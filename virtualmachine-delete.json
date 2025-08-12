@@ -1,0 +1,32 @@
+[
+  {
+    "etcd": "vmware-disk",
+    "this": "v2.1.vsphere.disk.detach",
+    "next": "v2.2.vsphere.disk.move",
+    "error": "v2.virtual.machine.delete"
+  },
+  {
+    "etcd": "vmware-disk",
+    "this": "v2.2.vsphere.disk.move",
+    "next": "v2.3.vsphere.vm.delete",
+    "error": "v2.virtual.machine.delete"
+  },
+  {
+    "etcd": "vmware-virtual-machine",
+    "this": "v2.3.vsphere.vm.delete",
+    "next": "v2.4.nsxt.nat.delete",
+    "error": "v2.virtual.machine.delete"
+  },
+  {
+    "etcd": "nsxt-nat",
+    "this": "v2.4.nsxt.nat.delete",
+    "next": "v2.5.rubrik.vm.sla.assign",
+    "error": "v2.virtual.machine.delete"
+  },
+  {
+    "etcd": "rubrik-virtual-machine",
+    "this": "v2.5.rubrik.vm.sla.assign",
+    "next": "v2.virtual.machine.delete",
+    "error": "v2.virtual.machine.delete"
+  }
+]

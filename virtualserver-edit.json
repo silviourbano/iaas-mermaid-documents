@@ -1,0 +1,32 @@
+[
+  {
+    "etcd": "nsxt-pool",
+    "this": "v2.1.nsxt.pool.edit",
+    "next": "v2.2.nsxt.vs.edit",
+    "error": "v2.virtualserver.edit"
+  },
+  {
+    "etcd": "nsxt-virtual-server",
+    "this": "v2.2.nsxt.vs.edit",
+    "next": "v2.3.nsxt.service.create",
+    "error": "v2.virtualserver.edit"
+  },
+  {
+    "etcd": "nsxt-service",
+    "this": "v2.3.nsxt.service.create",
+    "next": "v2.4.nsxt.group.create",
+    "error": "v2.virtualserver.edit"
+  },
+  {
+    "etcd": "nsxt-group",
+    "this": "v2.4.nsxt.group.create",
+    "next": "v2.5.nsxt.rule.edit",
+    "error": "v2.virtualserver.edit"
+  },
+  {
+    "etcd": "nsxt-rule",
+    "this": "v2.5.nsxt.rule.edit",
+    "next": "v2.virtualserver.edit",
+    "error": "v2.virtualserver.edit"
+  }
+]

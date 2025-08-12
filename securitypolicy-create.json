@@ -1,0 +1,20 @@
+[
+  {
+    "etcd": "nsxt-group",
+    "this": "v2.1.nsxt.group.create",
+    "next": "v2.2.nsxt.service.create",
+    "error": "v2.securitypolicy.create"
+  },
+  {
+    "etcd": "nsxt-service",
+    "this": "v2.2.nsxt.service.create",
+    "next": "v2.3.nsxt.rule.create",
+    "error": "v2.1.nsxt.rule.create.error.delete"
+  },
+  {
+    "etcd": "nsxt-rule",
+    "this": "v2.3.nsxt.rule.create",
+    "next": "v2.securitypolicy.create",
+    "error": "v2.securitypolicy.create"
+  }
+]

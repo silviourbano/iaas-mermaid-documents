@@ -1,0 +1,14 @@
+[
+  {
+    "etcd": "rubrik-virtual-machine",
+    "this": "v2.1.rubrik.vm.snapshot",
+    "next": "v2.2.rubrik.vm.check",
+    "error": "v2.snapshot"
+  },
+  {
+    "etcd": "rubrik-virtual-machine",
+    "this": "v2.2.rubrik.vm.check",
+    "next": "v2.snapshot",
+    "error": "v2.snapshot"
+  }
+]

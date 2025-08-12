@@ -1,0 +1,5 @@
+graph LR
+  v2.1.rubrik.vm.snapshot -->|next| v2.2.rubrik.vm.check
+  v2.1.rubrik.vm.snapshot -->|error| v2.snapshot
+  v2.2.rubrik.vm.check -->|next| v2.snapshot
+  v2.2.rubrik.vm.check -->|error| v2.snapshot

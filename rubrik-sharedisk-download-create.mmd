@@ -1,0 +1,7 @@
+graph LR
+  v2.1.rubrik.download.create -->|next| v2.2.rubrik.download.check
+  v2.1.rubrik.download.create -->|error| v2.2.rubrik.sharedisk.download.create.error.delete
+  v2.2.rubrik.download.check -->|next| v2.ontap.sharedisk.download
+  v2.2.rubrik.download.check -->|error| v2.2.rubrik.sharedisk.download.create.error.delete
+  v2.2.rubrik.sharedisk.download.create.error.delete -->|next| v2.ontap.sharedisk.download
+  v2.2.rubrik.sharedisk.download.create.error.delete -->|error| v2.ontap.sharedisk.download

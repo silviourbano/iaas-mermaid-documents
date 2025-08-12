@@ -1,0 +1,68 @@
+[
+  {
+    "etcd": "paloalto-host",
+    "this": "v2.1.paloalto.host.create",
+    "next": "v2.2.paloalto.host.edit",
+    "error": "v2.vpn.create"
+  },
+  {
+    "etcd": "paloalto-host",
+    "this": "v2.2.paloalto.host.edit",
+    "next": "v2.3.paloalto.ike.create",
+    "error": "v2.vpn.create"
+  },
+  {
+    "etcd": "paloalto-ikegateway",
+    "this": "v2.3.paloalto.ike.create",
+    "next": "v2.4.paloalto.tunnel.create",
+    "error": "v2.vpn.create"
+  },
+  {
+    "etcd": "paloalto-tunnel",
+    "this": "v2.4.paloalto.tunnel.create",
+    "next": "v2.5.paloalto.zone.edit",
+    "error": "v2.vpn.create"
+  },
+  {
+    "etcd": "paloalto-zone",
+    "this": "v2.5.paloalto.zone.edit",
+    "next": "v2.6.paloalto.rule.create",
+    "error": "v2.vpn.create"
+  },
+  {
+    "etcd": "paloalto-rule",
+    "this": "v2.6.paloalto.rule.create",
+    "next": "v2.7.paloalto.router.edit",
+    "error": "v2.vpn.create"
+  },
+  {
+    "etcd": "paloalto-router",
+    "this": "v2.7.paloalto.router.edit",
+    "next": "v2.8.paloalto.ipsec.create",
+    "error": "v2.vpn.create"
+  },
+  {
+    "etcd": "paloalto-ipsec",
+    "this": "v2.8.paloalto.ipsec.create",
+    "next": "v2.9.paloalto.pbf.create",
+    "error": "v2.vpn.create"
+  },
+  {
+    "etcd": "paloalto-pbf",
+    "this": "v2.9.paloalto.pbf.create",
+    "next": "v2.10.paloalto.ipsec.edit",
+    "error": "v2.vpn.create"
+  },
+  {
+    "etcd": "paloalto-ipsec",
+    "this": "v2.10.paloalto.ipsec.edit",
+    "next": "v2.11.paloalto.tunnel.edit",
+    "error": "v2.vpn.create"
+  },
+  {
+    "etcd": "paloalto-tunnel",
+    "this": "v2.11.paloalto.tunnel.edit",
+    "next": "v2.vpn.create",
+    "error": "v2.vpn.create"
+  }
+]

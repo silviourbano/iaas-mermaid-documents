@@ -1,0 +1,20 @@
+[
+  {
+    "etcd": "rubrik-host-snapshot",
+    "this": "v2.1.rubrik.snapshot.create",
+    "next": "v2.2.rubrik.snapshot.check",
+    "error": "v2.2.rubrik.sharedisk.snapshot.create.error.delete"
+  },
+  {
+    "etcd": "rubrik-host-snapshot",
+    "this": "v2.2.rubrik.snapshot.check",
+    "next": "v2.ontap.sharedisk.snapshot",
+    "error": "v2.2.rubrik.sharedisk.snapshot.create.error.delete"
+  },
+  {
+    "etcd": "rubrik-host-snapshot",
+    "this": "v2.2.rubrik.sharedisk.snapshot.create.error.delete",
+    "next": "v2.ontap.sharedisk.snapshot",
+    "error": "v2.ontap.sharedisk.snapshot"
+  }
+]

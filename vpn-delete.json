@@ -1,0 +1,104 @@
+[
+  {
+    "etcd": "paloalto-rule",
+    "this": "v2.1.paloalto.rule.delete",
+    "next": "v2.2.paloalto.nat.delete",
+    "error": "v2.vpn.delete"
+  },
+  {
+    "etcd": "paloalto-nat",
+    "this": "v2.2.paloalto.nat.delete",
+    "next": "v2.3.paloalto.host.edit",
+    "error": "v2.vpn.delete"
+  },
+  {
+    "etcd": "paloalto-host",
+    "this": "v2.3.paloalto.host.edit",
+    "next": "v2.4.paloalto.host.delete",
+    "error": "v2.vpn.delete"
+  },
+  {
+    "etcd": "paloalto-host",
+    "this": "v2.4.paloalto.host.delete",
+    "next": "v2.5.nsxt.vs.delete",
+    "error": "v2.vpn.delete"
+  },
+  {
+    "etcd": "fortinet-virtual-ip",
+    "this": "v2.5.fortinet.vip.delete",
+    "next": "v2.6.fortinet.snat.delete",
+    "error": "v2.vpn.delete"
+  },
+  {
+    "etcd": "nsxt-virtual-server",
+    "this": "v2.5.nsxt.vs.delete",
+    "next": "v2.6.nsxt.pool.delete",
+    "error": "v2.vpn.delete"
+  },
+  {
+    "etcd": "fortinet-central-snat",
+    "this": "v2.6.fortinet.snat.delete",
+    "next": "v2.7.fortinet.ippool.delete",
+    "error": "v2.vpn.delete"
+  },
+  {
+    "etcd": "nsxt-pool",
+    "this": "v2.6.nsxt.pool.delete",
+    "next": "v2.7.paloalto.pbf.delete",
+    "error": "v2.vpn.delete"
+  },
+  {
+    "etcd": "fortinet-ippool",
+    "this": "v2.7.fortinet.ippool.delete",
+    "next": "v2.8.nsxt.vs.delete",
+    "error": "v2.vpn.delete"
+  },
+  {
+    "etcd": "paloalto-pbf",
+    "this": "v2.7.paloalto.pbf.delete",
+    "next": "v2.8.paloalto.ipsec.edit",
+    "error": "v2.vpn.create"
+  },
+  {
+    "etcd": "paloalto-ipsec",
+    "this": "v2.8.paloalto.ipsec.edit",
+    "next": "v2.9.paloalto.ipsec.delete",
+    "error": "v2.vpn.delete"
+  },
+  {
+    "etcd": "paloalto-ipsec",
+    "this": "v2.9.paloalto.ipsec.delete",
+    "next": "v2.10.paloalto.router.edit",
+    "error": "v2.vpn.delete"
+  },
+  {
+    "etcd": "paloalto-router",
+    "this": "v2.10.paloalto.router.edit",
+    "next": "v2.11.paloalto.zone.edit",
+    "error": "v2.vpn.delete"
+  },
+  {
+    "etcd": "paloalto-zone",
+    "this": "v2.11.paloalto.zone.edit",
+    "next": "v2.12.paloalto.tunnel.edit",
+    "error": "v2.vpn.delete"
+  },
+  {
+    "etcd": "paloalto-tunnel",
+    "this": "v2.12.paloalto.tunnel.edit",
+    "next": "v2.13.paloalto.tunnel.delete",
+    "error": "v2.vpn.delete"
+  },
+  {
+    "etcd": "paloalto-tunnel",
+    "this": "v2.13.paloalto.tunnel.delete",
+    "next": "v2.14.paloalto.ike.delete",
+    "error": "v2.vpn.delete"
+  },
+  {
+    "etcd": "paloalto-ikegateway",
+    "this": "v2.14.paloalto.ike.delete",
+    "next": "v2.vpn.delete",
+    "error": "v2.vpn.delete"
+  }
+]

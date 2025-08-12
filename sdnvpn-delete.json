@@ -1,0 +1,68 @@
+[
+  {
+    "etcd": "nsxt-vpn-session",
+    "this": "v2.1.nsxt.vpn.session.delete",
+    "next": "v2.2.nsxt.vpn.endpoint.delete",
+    "error": "v2.vpn.delete"
+  },
+  {
+    "etcd": "nsxt-vpn-local-endpoint",
+    "this": "v2.2.nsxt.vpn.endpoint.delete",
+    "next": "v2.3.nsxt.vpn.service.delete",
+    "error": "v2.vpn.delete"
+  },
+  {
+    "etcd": "nsxt-vpn-service",
+    "this": "v2.3.nsxt.vpn.service.delete",
+    "next": "v2.4.paloalto.rule.edit",
+    "error": "v2.vpn.delete"
+  },
+  {
+    "etcd": "paloalto-rule",
+    "this": "v2.4.paloalto.rule.edit",
+    "next": "v2.5.paloalto.rule.delete",
+    "error": "v2.vpn.delete"
+  },
+  {
+    "etcd": "paloalto-rule",
+    "this": "v2.5.paloalto.rule.delete",
+    "next": "v2.6.paloalto.host.delete",
+    "error": "v2.vpn.delete"
+  },
+  {
+    "etcd": "paloalto-host",
+    "this": "v2.6.paloalto.host.delete",
+    "next": "v2.7.paloalto.router.edit",
+    "error": "v2.vpn.delete"
+  },
+  {
+    "etcd": "paloalto-router",
+    "this": "v2.7.paloalto.router.edit",
+    "next": "v2.8.fortinet.vip.delete",
+    "error": "v2.1.paloalto.rule.create.error.delete"
+  },
+  {
+    "etcd": "fortinet-virtual-ip",
+    "this": "v2.8.fortinet.vip.delete",
+    "next": "v2.9.fortinet.snat.edit",
+    "error": "v2.vpn.delete"
+  },
+  {
+    "etcd": "fortinet-central-snat",
+    "this": "v2.9.fortinet.snat.edit",
+    "next": "v2.10.fortinet.snat.delete",
+    "error": "v2.vpn.delete"
+  },
+  {
+    "etcd": "fortinet-central-snat",
+    "this": "v2.10.fortinet.snat.delete",
+    "next": "v2.11.fortinet.ippool.delete",
+    "error": "v2.vpn.delete"
+  },
+  {
+    "etcd": "fortinet-ippool",
+    "this": "v2.11.fortinet.ippool.delete",
+    "next": "v2.vpn.delete",
+    "error": "v2.vpn.delete"
+  }
+]

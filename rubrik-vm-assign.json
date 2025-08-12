@@ -1,0 +1,8 @@
+[
+  {
+    "etcd": "rubrik-virtual-machine",
+    "this": "v2.1.rubrik.vm.sla.assign",
+    "next": "v2.sla.assign",
+    "error": "v2.sla.assign"
+  }
+]

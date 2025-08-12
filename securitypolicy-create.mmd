@@ -1,0 +1,7 @@
+graph LR
+  v2.1.nsxt.group.create -->|next| v2.2.nsxt.service.create
+  v2.1.nsxt.group.create -->|error| v2.securitypolicy.create
+  v2.2.nsxt.service.create -->|next| v2.3.nsxt.rule.create
+  v2.2.nsxt.service.create -->|error| v2.1.nsxt.rule.create.error.delete
+  v2.3.nsxt.rule.create -->|next| v2.securitypolicy.create
+  v2.3.nsxt.rule.create -->|error| v2.securitypolicy.create

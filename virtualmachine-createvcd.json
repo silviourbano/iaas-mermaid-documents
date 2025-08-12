@@ -1,0 +1,14 @@
+[
+  {
+    "etcd": "vmware-virtual-machine",
+    "this": "v2.1.vsphere.vm.createvcd",
+    "next": "v2.virtual.machine.createvcd",
+    "error": "v2.2.vsphere.vm.createvcd.error.delete"
+  },
+  {
+    "etcd": "vmware-virtual-machine",
+    "this": "v2.2.vsphere.vm.createvcd.error.delete",
+    "next": "v2.virtual.machine.createvcd",
+    "error": "v2.virtual.machine.createvcd"
+  }
+]

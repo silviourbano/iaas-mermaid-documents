@@ -1,0 +1,56 @@
+[
+  {
+    "etcd": "nsxt-load-balance",
+    "this": "v2.1.nsxt.lb.create",
+    "next": "v2.2.nsxt.pool.create",
+    "error": "v2.virtualserver.create"
+  },
+  {
+    "etcd": "nsxt-pool",
+    "this": "v2.2.nsxt.pool.create",
+    "next": "v2.3.nsxt.vs.create",
+    "error": "v2.2.nsxt.pool.create.error.delete"
+  },
+  {
+    "etcd": "nsxt-virtual-server",
+    "this": "v2.3.nsxt.vs.create",
+    "next": "v2.4.nsxt.service.create",
+    "error": "v2.1.nsxt.vs.create.error.delete"
+  },
+  {
+    "etcd": "nsxt-service",
+    "this": "v2.4.nsxt.service.create",
+    "next": "v2.5.nsxt.group.create",
+    "error": "v2.1.nsxt.vs.create.error.delete"
+  },
+  {
+    "etcd": "nsxt-group",
+    "this": "v2.5.nsxt.group.create",
+    "next": "v2.6.nsxt.rule.create",
+    "error": "v2.1.nsxt.vs.create.error.delete"
+  },
+  {
+    "etcd": "nsxt-rule",
+    "this": "v2.6.nsxt.rule.create",
+    "next": "v2.7.nsxt.rule.edit",
+    "error": "v2.1.nsxt.vs.create.error.delete"
+  },
+  {
+    "etcd": "nsxt-rule",
+    "this": "v2.7.nsxt.rule.edit",
+    "next": "v2.virtualserver.create",
+    "error": "v2.1.nsxt.vs.create.error.delete"
+  },
+  {
+    "etcd": "nsxt-virtual-server",
+    "this": "v2.1.nsxt.vs.create.error.delete",
+    "next": "v2.2.nsxt.pool.create.error.delete",
+    "error": "v2.virtualserver.create"
+  },
+  {
+    "etcd": "nsxt-pool",
+    "this": "v2.2.nsxt.pool.create.error.delete",
+    "next": "v2.virtualserver.create",
+    "error": "v2.virtualserver.create"
+  }
+]

@@ -1,0 +1,8 @@
+[
+  {
+    "etcd": "vmware-template",
+    "this": "v2.1.vsphere.template.delete",
+    "next": "v2.template.delete",
+    "error": "v2.template.delete"
+  }
+]

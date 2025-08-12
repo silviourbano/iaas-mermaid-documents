@@ -1,0 +1,92 @@
+[
+  {
+    "etcd": "paloalto-service",
+    "this": "v2.1.paloalto.service.create",
+    "next": "v2.2.paloalto.host.create",
+    "error": "v2.dnat.create"
+  },
+  {
+    "etcd": "paloalto-host",
+    "this": "v2.2.paloalto.host.create",
+    "next": "v2.3.paloalto.rule.create",
+    "error": "v2.5.paloalto.host.create.error.delete"
+  },
+  {
+    "etcd": "paloalto-rule",
+    "this": "v2.3.paloalto.rule.create",
+    "next": "v2.4.paloalto.rule.edit",
+    "error": "v2.4.paloalto.rule.create.error.delete"
+  },
+  {
+    "etcd": "paloalto-rule",
+    "this": "v2.4.paloalto.rule.edit",
+    "next": "v2.5.paloalto.dnat.create",
+    "error": "v2.3.paloalto.rule.edit.error.edit"
+  },
+  {
+    "etcd": "paloalto-nat",
+    "this": "v2.5.paloalto.dnat.create",
+    "next": "v2.6.paloalto.dnat.edit",
+    "error": "v2.2.paloalto.dnat.create.error.delete"
+  },
+  {
+    "etcd": "paloalto-nat",
+    "this": "v2.6.paloalto.dnat.edit",
+    "next": "v2.7.fortinet.address.create",
+    "error": "v2.1.paloalto.dnat.edit.error.edit"
+  },
+  {
+    "etcd": "fortinet-address",
+    "this": "v2.7.fortinet.address.create",
+    "next": "v2.8.fortinet.vip.create",
+    "error": "v2.3.fortinet.address.create.error.delete"
+  },
+  {
+    "etcd": "fortinet-virtual-ip",
+    "this": "v2.8.fortinet.vip.create",
+    "next": "v2.dnat.create",
+    "error": "v2.2.fortinet.vip.create.error.delete"
+  },
+  {
+    "etcd": "paloalto-nat",
+    "this": "v2.1.paloalto.dnat.edit.error.edit",
+    "next": "v2.2.paloalto.dnat.create.error.delete",
+    "error": "v2.dnat.create"
+  },
+  {
+    "etcd": "fortinet-virtual-ip",
+    "this": "v2.2.fortinet.vip.create.error.delete",
+    "next": "v2.3.fortinet.address.create.error.delete",
+    "error": "v2.dnat.create"
+  },
+  {
+    "etcd": "paloalto-nat",
+    "this": "v2.2.paloalto.dnat.create.error.delete",
+    "next": "v2.3.paloalto.host.create.error.delete",
+    "error": "v2.dnat.create"
+  },
+  {
+    "etcd": "fortinet-address",
+    "this": "v2.3.fortinet.address.create.error.delete",
+    "next": "v2.2.paloalto.dnat.create.error.delete",
+    "error": "v2.dnat.create"
+  },
+  {
+    "etcd": "paloalto-rule",
+    "this": "v2.3.paloalto.rule.edit.error.edit",
+    "next": "v2.4.paloalto.rule.create.error.delete",
+    "error": "v2.dnat.create"
+  },
+  {
+    "etcd": "paloalto-rule",
+    "this": "v2.4.paloalto.rule.create.error.delete",
+    "next": "v2.5.paloalto.host.create.error.delete",
+    "error": "v2.dnat.create"
+  },
+  {
+    "etcd": "paloalto-host",
+    "this": "v2.5.paloalto.host.create.error.delete",
+    "next": "v2.dnat.create",
+    "error": "v2.dnat.create"
+  }
+]

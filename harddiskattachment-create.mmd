@@ -1,0 +1,5 @@
+graph LR
+  v2.1.vsphere.disk.attach -->|next| v2.2.vsphere.disk.policy
+  v2.1.vsphere.disk.attach -->|error| v2.disk.attach
+  v2.2.vsphere.disk.policy -->|next| v2.disk.attach
+  v2.2.vsphere.disk.policy -->|error| v2.disk.attach

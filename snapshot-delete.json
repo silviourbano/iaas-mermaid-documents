@@ -1,0 +1,8 @@
+[
+  {
+    "etcd": "vmware-snapshot",
+    "this": "v2.1.vsphere.snapshot.delete",
+    "next": "v2.snapshot.delete",
+    "error": "v2.snapshot.delete"
+  }
+]

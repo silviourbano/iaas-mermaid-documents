@@ -1,0 +1,5 @@
+graph LR
+  v2.1.vsphere.snapshot.create -->|next| v2.snapshot.create
+  v2.1.vsphere.snapshot.create -->|error| v2.1.vsphere.snapshot.create.error.delete
+  v2.1.vsphere.snapshot.create.error.delete -->|next| v2.snapshot.create
+  v2.1.vsphere.snapshot.create.error.delete -->|error| v2.snapshot.create

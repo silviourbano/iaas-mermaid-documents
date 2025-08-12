@@ -1,0 +1,14 @@
+[
+  {
+    "etcd": "nsxt-vpn-profile-service",
+    "this": "v2.1.nsxt.vpnsprofile.create",
+    "next": "v2.vpnsprofile.create",
+    "error": "v2.2.nsxt.vpnsprofile.create.error.delete"
+  },
+  {
+    "etcd": "nsxt-vpn-profile-service",
+    "this": "v2.2.nsxt.vpnsprofile.create.error.delete",
+    "next": "v2.vpnsprofile.create",
+    "error": "v2.vpnsprofile.create"
+  }
+]

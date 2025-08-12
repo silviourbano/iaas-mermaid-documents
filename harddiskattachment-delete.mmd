@@ -1,0 +1,5 @@
+graph LR
+  v2.1.vsphere.disk.detach -->|next| v2.2.vsphere.disk.move
+  v2.1.vsphere.disk.detach -->|error| v2.disk.detach
+  v2.2.vsphere.disk.move -->|next| v2.disk.detach
+  v2.2.vsphere.disk.move -->|error| v2.disk.detach
